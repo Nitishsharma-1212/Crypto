@@ -83,12 +83,6 @@ python filecrypti_pro.py
 
 ---
 
-## Screenshots
-
-*(Add screenshots of your app here for clarity)*
-
----
-
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -102,4 +96,4 @@ Contributions, issues, and feature requests are welcome!
 
 ## License
 
-MIT License © [Your Name]
+MIT License © Nitish
