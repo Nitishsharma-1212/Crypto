@@ -24,7 +24,7 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Nitishsharma1212/FileCryptiPro.git
+git clone https://github.com/Nitishsharma-1212/FileCryptiPro.git
 cd FileCryptiPro
 ```
 
