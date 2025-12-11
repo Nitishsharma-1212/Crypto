@@ -1,20 +1,21 @@
 # FileCrypti Pro — Full Edition
 
-**FileCrypti Pro** is a secure file encryption and decryption tool with a modern GUI built in Python. It supports AES-GCM encryption, optional keyfiles, secure shredding, drag-and-drop, and history tracking. Designed for both files and folders, it is easy to use yet highly secure.
+**FileCrypti Pro** is a secure file encryption and decryption tool with a modern GUI built in Python. It uses AES-GCM encryption with PBKDF2-HMAC-SHA256 key derivation and supports optional keyfiles, secure shredding, folder encryption, drag-and-drop, activity logging, and auto-lock for enhanced security.
 
 ---
 
 ## Features
 
-- **AES-GCM Encryption** with PBKDF2-HMAC-SHA256 key derivation
-- **Optional Keyfile** for an additional layer of security
-- **Folder Support** (folders are zipped before encryption)
-- **Secure Shredding** to permanently delete sensitive files
-- **Progress Tracking** with real-time progress bars
-- **Activity Log & History** of encrypt/decrypt actions
-- **Drag & Drop Support** for files
-- **Auto-Lock** for inactivity (configurable timeout)
-- **Light/Dark Theme** for better usability
+* **AES-GCM Encryption** with authenticated encryption
+* **PBKDF2-HMAC-SHA256** key derivation with configurable iterations
+* **Optional Keyfile** for additional security
+* **Folder Support** (folders are zipped before encryption)
+* **Secure Shredding** of files and folders
+* **Progress Bars** for encrypt/decrypt operations
+* **Activity Log & History** of actions
+* **Drag & Drop** support for files
+* **Auto-Lock** on inactivity (configurable timeout)
+* **Light/Dark Theme** for better usability
 
 ---
 
@@ -25,80 +26,80 @@
 ```bash
 git clone https://github.com/yourusername/FileCryptiPro.git
 cd FileCryptiPro
-Install dependencies (Python 3.10+ recommended):
+```
 
-bash
-Copy code
+2. Install dependencies (Python 3.10+ recommended):
+
+```bash
 pip install -r requirements.txt
-Dependencies:
+```
 
-cryptography
+**Dependencies:**
 
-tkinter (built-in in Python)
+* `cryptography`
+* `tkinter` (built-in with Python)
+* `tkinterdnd2` (optional, for drag-and-drop)
 
-tkinterdnd2 (optional, for drag-and-drop)
+---
 
-Usage
+## Usage
+
 Run the application:
 
-bash
-Copy code
+```bash
 python filecrypti_pro.py
-Encrypt a File/Folder:
+```
 
-Select a file or folder
+### Encrypt a File or Folder
 
-Optionally create or browse a keyfile
+1. Select a file or folder to encrypt
+2. Optionally create or browse a keyfile
+3. Enter a password
+4. Click **Start Encrypt**
+5. Optionally **Shred Source** to securely delete original files
 
-Enter a password
+### Decrypt a File
 
-Click Start Encrypt
+1. Select the encrypted `.fcp` file
+2. Enter the same password and keyfile (if used)
+3. Click **Start Decrypt**
+4. SHA256 hash is displayed for verification
 
-Optionally Shred Source after encryption
+### History & Settings
 
-Decrypt a File:
+* View recent encrypt/decrypt operations in **History**
+* Adjust PBKDF2 iterations, chunk size, auto-lock timeout, and theme in **Settings**
+* Clear history if needed
 
-Select the encrypted .fcp file
+---
 
-Enter the same password and keyfile (if used)
+## Security Notes
 
-Click Start Decrypt
+* Encryption is **authenticated** using AES-GCM
+* Passwords are processed with high-iteration PBKDF2-HMAC-SHA256
+* Optional keyfiles enhance security
+* Secure shredding overwrites files multiple times before deletion
+* Always keep backups — shredded files cannot be recovered
 
-Verify SHA256 hash for file integrity
+---
 
-History & Settings:
+## Screenshots
 
-View recent encrypt/decrypt operations
+*(Add screenshots of your app here for clarity)*
 
-Adjust PBKDF2 iterations, chunk size, auto-lock timeout, and theme
+---
 
-Clear history when needed
+## Contributing
 
-Security Notes
-Encryption uses AES-GCM for authenticated encryption
-
-Passwords are processed via PBKDF2-HMAC-SHA256 with high iteration count
-
-Keyfiles provide an additional layer of security
-
-Shredding overwrites files multiple times for secure deletion
-
-Always keep backups — irreversible operations like shredding cannot be undone
-
-Screenshots
-(Add screenshots of your app here for clarity)
-
-Contributing
 Contributions, issues, and feature requests are welcome!
 
-Fork the project
+1. Fork the project
+2. Create a new branch (`git checkout -b feature-name`)
+3. Make your changes
+4. Submit a pull request
 
-Create a new branch (git checkout -b feature-name)
+---
 
-Make your changes
+## License
 
-Submit a pull request
-
-License
-MIT License © Nitish
-
+MIT License © [Your Name]
